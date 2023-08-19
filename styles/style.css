@@ -9,14 +9,17 @@ body {
 }
 
 .header {
-    background-image: url('../images/ceuestrelado.jpg');
-    background-position: center;
+    background-image: url('../images/espaco3.jpg');
+   background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 }
+
+
 
 .header .nav-header .list-header {
     display: flex;
@@ -33,16 +36,15 @@ body {
 }
 
 .header .box-header {
-    border-right: 1px solid white;
     width: 40vw;
     height: 40vh;
     position: relative;
-    top: 45%;
-    left: 9%;
+    top: 30%;
+    left: 35%;
    
 }
 
-.header .box-header > h2 {
+/* .header .box-header > h2 {
     color: #fff;
     text-align: center;
     text-shadow:
@@ -54,5 +56,5 @@ body {
       0 0 92px #0fa,
       0 0 102px #0fa,
       0 0 151px #0fa;
-}
+} */
 
