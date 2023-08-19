@@ -7,23 +7,24 @@
 /*  BODY */
 
 body {
-    color: white;
+    color: black;
+ 
 }
 
 /* HEADER */
 
 .header {
-    background-image: url('../images/espaco3.jpg');
-   background-position: center;
-    background-repeat: no-repeat;
+    /* background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); background-blend-mode: normal, normal, screen, overlay, normal; */
+   
+    background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(167, 207, 223, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #c6e0ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #0033cc 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #b3d9ff 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #9fc5e8 0%, #c6b18b 69%, #a1a392 70%, #6e91a2 100%);
+    background-blend-mode: normal, normal, screen, overlay, normal;
     background-size: cover;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 1rem;
 }
-
-
 
 .header .nav-header .list-header {
     display: flex;
@@ -32,34 +33,23 @@ body {
 
 .header .nav-header .list-header .li-header {
     list-style-type: none;
+    margin-left: 1rem;
 }
 .header .nav-header .list-header .li-header > a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .header .box-header {
     width: 40vw;
     height: 40vh;
-    position: relative;
+    position: absolute;
     top: 30%;
-    left: 35%;
+    left: 15%;
    
 }
 
-/* .header .box-header > h2 {
-    color: #fff;
-    text-align: center;
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
-} */
+
 
 /* MAIN */
 
@@ -73,13 +63,19 @@ body {
 .main .box-images {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
-    height: 300vh;
+    border-top-left-radius: 5rem;
+   border-end-start-radius: 5rem;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+   color: black;
+    height: 220vh;
+
+
 }
 
 .main .box-images .div-image {
     border: 1px solid blue;
-    height: 80vh;
+    height: 70vh;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -135,3 +131,5 @@ body {
     transition: linear .3s, background-size .3s .4s;
 
 }
+
+
