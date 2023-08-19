@@ -27,7 +27,6 @@ body {
 
 .header .nav-header .list-header {
     display: flex;
-    gap: 2rem;
     font-size: 1.3rem;
 }
 
@@ -81,12 +80,58 @@ body {
 .main .box-images .div-image {
     border: 1px solid blue;
     height: 80vh;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-.main .box-images .div-image:nth-child(1) {
+.main .box-images .div-image  > p {
+    border: 1px solid black;
+    width: 35vw;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+.main .box-images .div-image:nth-child(2) {
     flex-direction: row-reverse;
+}
+
+.main .box-images .div-image .img {
+    --s: 10px;
+    /* size of the frame */
+    --b: 2px;
+    /* border thickness */
+    --w: 350px;
+    /* width of the image */
+    --c: red;
+
+    width: var(--w);
+    height: 340px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    padding: var(--s);
+    --_g: #0000 25%, var(--c) 0;
+    background:
+        conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0,
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0,
+        conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100%,
+        conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100%;
+    background-size: 15% 15%;
+    background-repeat: no-repeat;
+    outline: calc(var(--w)/2) solid #0009;
+    outline-offset: calc(var(--w)/-2 - var(--s));
+    clip-path: inset(var(--s));
+    transition: .4s;
+    cursor: pointer;
+}
+
+.main .box-images .div-image .img:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--s);
+    clip-path: inset(calc(-1*var(--s) - var(--b)));
+    background-size: 45% 45%;
+    transition: linear .3s, background-size .3s .4s;
+
 }
